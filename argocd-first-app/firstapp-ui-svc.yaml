@@ -7,4 +7,4 @@ spec:
     - port: 80
       targetPort: 80
   selector:
-    app: firstapp-ui  v
+    app: firstapp-ui
