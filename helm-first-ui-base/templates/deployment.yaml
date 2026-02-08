@@ -4,6 +4,9 @@ metadata:
   name: {{ include "helm-firstapp-ui-base.fullname" . }}
   labels:
     {{- include "helm-firstapp-ui-base.labels" . | nindent 4 }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
